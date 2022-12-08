@@ -1,4 +1,5 @@
-[<p align="center"><img src="https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png" data-canonical-src="https://support.crowdin.com/assets/logos/crowdin-dark-symbol.png" width="200" height="200" align="center"/></p>](https://crowdin.com)
+> **Warning**
+> This version of Crowdin CLI is deprecated and is no longer supported
 
 # Crowdin CLI
 
@@ -11,19 +12,8 @@ Crowdin CLI v2 is a command line tool that allows you to manage and synchronize 
 
 This is a cross-platform and it runs in a terminal on Linux based and macOS operating systems or in Command Prompt on Windows.
 
-<div class="bs-callout bs-callout-info">
-  <h4>What's New</h4>
-  <ul class="no-margin">
-    <li>New type of YAML configuration</li>
-    <li>Validation of a configuration file with the help of <code>lint</code> command</li>
-    <li>Generation of a configuration file with the help of <code>generate</code> command</li>
-    <li>Improved process of files upload</li>
-    <li>Possibility to work with a single file without a configuration</li>
-    <li><code>--dryrun</code> option to preview the list of managed files</li>
-  </ul>
-</div>
-
-##
+<details>
+<summary>Details</summary>
 
 ### Installation
 
@@ -855,3 +845,6 @@ Except as contained in the LICENSE file, the name(s) of the above copyright
 holders shall not be used in advertising or otherwise to promote the sale,
 use or other dealings in this Software without prior written authorization.
 </pre>
+
+
+</details>
