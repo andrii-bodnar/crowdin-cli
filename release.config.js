@@ -1,6 +1,7 @@
 module.exports = {
   branches: [
-    "cli3"
+    "cli3",
+    "ci/automate-chocolatey-publishing"
   ],
   repositoryUrl: "https://github.com/crowdin/crowdin-cli",
   tagFormat: "${version}",
