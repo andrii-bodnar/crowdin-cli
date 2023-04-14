@@ -54,6 +54,22 @@ jobs:
           token: ${{ secrets.GH_HOMEBREW_TOKEN }}
           inputs: '{ "version": "${{ github.ref_name }}" }'
 
+  chocolatey:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Choco pack
+        uses: crazy-max/ghaction-chocolatey@v2
+        working-directory: chocolatey
+        with:
+          args: pack
+
+      - name: Choco pack
+        uses: crazy-max/ghaction-chocolatey@v2
+        working-directory: chocolatey
+        with:
+          args: push --api-key ${{ secrets.CHOCOLATEY_API_KEY }}
+
   release-asset:
     runs-on: ubuntu-latest
     steps:
@@ -66,13 +82,3 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: 'crowdin-cli.zip'
-
-  chocolatey:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Choco pack
-        uses: crazy-max/ghaction-chocolatey@v2
-        working-directory: chocolatey
-        with:
-          args: pack
