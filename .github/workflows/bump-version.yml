@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -18,5 +22,7 @@ jobs:
 
       - name: Bump version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.RELEASE_GH_TOKEN }}
+        run: |
+          npx semantic-release
+          npx semantic-release --version
